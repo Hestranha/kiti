@@ -1,44 +1,45 @@
-body {
-  text-align: center;
-  margin-top: 50px;
-}
-h1 {
-  color: #961254;
+.container-bottom {
+  background-color: transparent;
+  height: 97.6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #boton-chick {
-    background-color: pink;
-    border: 1px solid rgb(199, 28, 85);
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+  background-color: pink;
+  border: 1px solid rgb(199, 28, 85);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
-  
+
 #boton-chick:hover {
-    background-color: hotpink;
+  background-color: hotpink;
 }
+
 #gift-kiti {
-    position: absolute;
-    left: 47%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
 }
 
 .heart-animation {
-    animation: fadeOut 4s;
+  animation: fadeOut 4s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+
+  100% {
+    opacity: 0;
   }
-  
+}
