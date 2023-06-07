@@ -1,12 +1,18 @@
 function mostrarKiti() {
   document.body.innerHTML = '<div id="gift-kiti"><img src="https://64.media.tumblr.com/5d7df7d34b9f5e76ab12b22579ec55df/tumblr_na697gAEzS1stwx7xo1_400.gif"></div>';
+  setTimeout(function () {
+    reproducirCancion();
+  }, 500);
+  setTimeout(function () {
+    mostrarCorazones();
+  }, 8800);
 }
 
 function moverKiti() {
   var container = document.getElementById("gift-kiti");
   var left = 0;
   var direction = 1;
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     container.style.left = left + "px";
     left += direction;
     if (left > window.innerWidth - container.offsetWidth || left < 0) {
@@ -34,15 +40,15 @@ function mostrarCorazones() {
   document.body.appendChild(img);
 
   // Establece un temporizador para que el corazón desaparezca después de 2 segundos
-  setTimeout(function() {
+  setTimeout(function () {
     img.style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.body.removeChild(img);
     }, 1000);
   }, 2000);
 
   // Establece un temporizador para que se muestre otro corazón después de 1 segundo
-  setTimeout(function() {
+  setTimeout(function () {
     mostrarCorazones();
   }, 350);
 }
@@ -52,7 +58,10 @@ function reproducirCancion() {
   var audio = new Audio('cupid.mp3');
   // Reproduce el archivo de audio
   audio.volume = 0.5;
-  audio.currentTime = 1;
+  // Adelanta 3.1 segundos en la reproducción
+  audio.currentTime = 3.1;
+  // Habilita la reproducción en bucle
+  audio.loop = true;
   audio.play();
 }
 
