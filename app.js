@@ -5,7 +5,7 @@ function mostrarKiti() {
   }, 500);
   setTimeout(function () {
     mostrarCorazones();
-  }, 8800);
+  }, 8600);
 }
 
 function moverKiti() {
